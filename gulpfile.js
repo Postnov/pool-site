@@ -135,7 +135,7 @@ gulp.task('css:polish', function () {
     return gulp.src(path.src.css)
         .pipe(sass())
         .pipe(prefixer({
-            browsers: ['last 15 versions'],
+            browsers: ['last 2 versions'],
             cascade: false,
             grid: false
         }))
