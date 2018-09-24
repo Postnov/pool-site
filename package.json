@@ -11,7 +11,9 @@
   },
   "keywords": [],
   "dependencies": {
-    "gulp": "^3.8.11"
+    "gulp": "^3.8.11",
+    "lodash": "^4.17.11",
+    "sshpk": "^1.14.2"
   },
   "author": "",
   "license": "ISC",
