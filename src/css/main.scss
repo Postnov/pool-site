@@ -1,8 +1,27 @@
 
-//libs
+//fonts
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700|Roboto:300,400,500,700');
+
+//base
 @import '../../bower_components/normalize/normalize';
 @import 'partails/media-mixin.scss';
-
-
-//parts
 @import 'partails/base.scss';
+
+
+//components
+@import 'partails/about.scss';
+@import 'partails/contacts.scss';
+@import 'partails/detail.scss';
+@import 'partails/dinamic.scss';
+@import 'partails/footer.scss';
+@import 'partails/form.scss';
+@import 'partails/header.scss';
+@import 'partails/icon-grid.scss';
+@import 'partails/index.scss';
+@import 'partails/map.scss';
+@import 'partails/portfolio.scss';
+@import 'partails/reviews.scss';
+@import 'partails/scheme.scss';
+@import 'partails/service-grid.scss';
+@import 'partails/services.scss';
+
