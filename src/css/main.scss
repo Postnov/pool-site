@@ -3,25 +3,26 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700|Roboto:300,400,500,700');
 
 //base
+@import 'base/variables.scss';
 @import '../../bower_components/normalize/normalize';
-@import 'partails/media-mixin.scss';
-@import 'partails/base.scss';
+@import 'base/media-mixin.scss';
+@import 'base/base.scss';
 
 
 //components
-@import 'partails/about.scss';
-@import 'partails/contacts.scss';
-@import 'partails/detail.scss';
-@import 'partails/dinamic.scss';
-@import 'partails/footer.scss';
-@import 'partails/form.scss';
-@import 'partails/header.scss';
-@import 'partails/icon-grid.scss';
-@import 'partails/index.scss';
-@import 'partails/map.scss';
-@import 'partails/portfolio.scss';
-@import 'partails/reviews.scss';
-@import 'partails/scheme.scss';
-@import 'partails/service-grid.scss';
-@import 'partails/services.scss';
+@import 'components/about.scss';
+@import 'components/contacts.scss';
+@import 'components/detail.scss';
+@import 'components/dinamic.scss';
+@import 'components/footer.scss';
+@import 'components/form.scss';
+@import 'components/header.scss';
+@import 'components/icon-grid.scss';
+@import 'components/index.scss';
+@import 'components/map.scss';
+@import 'components/portfolio.scss';
+@import 'components/reviews.scss';
+@import 'components/scheme.scss';
+@import 'components/service-grid.scss';
+@import 'components/services.scss';
 
