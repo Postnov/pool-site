@@ -2,4 +2,4 @@
     Javascript files including like this:
 */
 
-//import ('partails/test.js');
+//import ('partails/common.js');
