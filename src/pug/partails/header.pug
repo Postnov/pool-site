@@ -7,16 +7,6 @@ header.header
                 img.logo__sign(src="images/logo-img.png", alt="")
                 img.logo__text(src="images/logo-text.png" alt="")
         nav.header__nav.nav
-            -
-                var menu = [
-                    {text:'О компании', url: 'about.html'},
-                    {text:'Бассейны', url: 'pools.html'},
-                    {text:'Сауны', url: 'saunas.html'},
-                    {text:'Сервис', url: 'service.html'},
-                    {text:'Портфолио', url: 'portfolio.html'},
-                    {text:'Контакты', url: 'contacts.html'},
-                ];
-
             ul.nav__list
                 each item in menu
                     li.nav__item
