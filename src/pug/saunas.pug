@@ -2,30 +2,28 @@ doctype html
 html(lang="ru")
 	include partails/head.pug
 	body
+		include partails/variables.pug
 		include partails/header.pug
 
 
 		//START GREETING
+		section.greeting.greeting--saunas
+			h1.greeting__title Сауны
 		//END GREETING
 
-		//START GREETING
-		//END GREETING
+		//START SERVICES
+		section.services
+			.services__container
+				h2.services__title.heading Услуги
+				h3.services__subtitle.heading--sm Строительство саун под ключ,применение последних технологий
 
-		//START GREETING
-		//END GREETING
-
-		//START GREETING
-		//END GREETING
-
-		//START GREETING
-		//END GREETING
-
-		//START GREETING
-		//END GREETING
-
-		//START GREETING
-		//END GREETING
-
-
+				ul.services__list.services-grid
+					each item, index in servicesSaunas
+						li.services-grid__item
+							img.services-grid__img(src="images/service-item-"+index+".jpg", alt="")
+							.services-grid__content
+								p.services-grid__title=item.title
+								p.services-grid__descr=item.descr
+		//END SERVICES
 
 		include partails/footer.pug
