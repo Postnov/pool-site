@@ -1,3 +1,26 @@
-//START FOOTER
 
-//END FOOTER
+//START HEADER
+header.header
+    .header__container
+        .header__logo
+            .logo
+                img.logo__sign(src="images/logo-img.png", alt="")
+                img.logo__text(src="images/logo-text.png" alt="")
+        nav.header__nav.nav
+            -
+                var menu = [
+                    {text:'О компании', url: 'about.html'},
+                    {text:'Бассейны', url: 'pools.html'},
+                    {text:'Сауны', url: 'saunas.html'},
+                    {text:'Сервис', url: 'service.html'},
+                    {text:'Портфолио', url: 'portfolio.html'},
+                    {text:'Контакты', url: 'contacts.html'},
+                ];
+
+            ul.nav__list
+                each item in menu
+                    li.nav__item
+                        a.nav__link(href=item.url)=item.text
+        .header__contact
+            a.header__phone(href="tel:89184948888") 8 (918) 49 48 888
+//END HEADER

@@ -1,4 +1,35 @@
 // START FOOTER
+
+footer.footer
+    .footer__container
+        .footer__row
+            -
+                var menu = [
+                    {text:'О компании', url: 'about.html'},
+                    {text:'Бассейны', url: 'pools.html'},
+                    {text:'Сауны', url: 'saunas.html'},
+                    {text:'Сервис', url: 'service.html'},
+                    {text:'Портфолио', url: 'portfolio.html'},
+                    {text:'Контакты', url: 'contacts.html'},
+                ];
+
+            ul.footer__menu.footer-menu
+                each item in menu
+                    li.footer-menu__item
+                        a.footer-menu__link(href=item.url)=item.text
+
+            ul.footer__contacts.footer-contacts
+                li.footer-contacts__item
+                    a.footer-contacts__link(href="tel:89184948888") 8 (918) 49 48 888
+                li.footer-contacts__item
+                    a.footer-contacts__link(href="mailto:hello@lUXAR.ru") hello@lUXAR.ru
+            ul.footer__address.footer-address
+                li.footer-address__item
+                    a.footer-address__link(href="#") ул. Уральская 106/2 350078 Краснодар Россия
+
+
+
+
 script(src="js/main.js")
 // END FOOTER
 
