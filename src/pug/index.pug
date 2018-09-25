@@ -2,7 +2,99 @@ doctype html
 html(lang="ru")
 	include partails/head.pug
 	body
-
-
 		include partails/header.pug
+
+
+		//START GREETING
+		section.greeting
+			h1.greeting__title #[span Вода] облеченная в совершенство
+		//END GREETING
+
+		//START SERVICES
+		section.services
+			.services__container
+				h2.services__title.heading Услуги
+				h3.services__subtitle.heading--sm Мы предлагаем широкий спектр услуг, а именно:
+
+				ul.services__list.services-grid
+					-
+						var services = {
+							1: {
+								title: 'Строительство бассейнов',
+								descr: 'Бассейны Servicepools — это возможность получить совоеменный бассейн по выгодной цене.'
+							},
+							2: {
+								title: 'Строительство саун и хаммамов',
+								descr: 'Каждый проект создается с учетом строгих норм строительства — вы можете быть уверены в безопасности объекта.'
+							},
+							3: {
+								title: 'Сервисное обслуживание',
+								descr: 'С компанией Servicepools вы забудьте о всех проблемах связанных с вашим бассейном — теперь это наша забота.'
+							},
+							4: {
+								title: 'Химия и оборудование',
+								descr: 'Душа моя озарена неземной радостью, как эти чудесные весенние утра, которыми я наслаждаюсь от всего сердца. '
+							},
+						};
+
+					each item, index in services
+						li.services-grid__item
+							img.services-grid__img(src="images/service-item-"+index+".jpg", alt="")
+							.services-grid__content
+								p.services-grid__title=item.title
+								p.services-grid__descr=item.descr
+		//END SERVICES
+
+		//START FEATURES
+		section.features
+			.features__container
+				h2.features__title.heading Преимущества
+				h3.features__subtitle.heading--sm Мы объединили лучшие качества
+
+				ul.features__icon-list.icon-grid
+
+					-
+						var features = {
+							1:'Высокое качество материалов',
+							2:'Современные технологии и оборудование',
+							3:'Профессиональная команда ',
+							4:'Выполнем работы точно в срок',
+							5:'Даем гарантинтии по договору',
+							6:'Многолетний опыт работы',
+						}
+
+					each value, index in features
+						li.icon-grid__item
+							.icon-grid__icon
+								img.icon-grid__img(src="images/features-icon-"+index+".png", alt="")
+							p.icon-grid__text=value
+
+		//END FEATURES
+
+		//START SCHEME
+		section.scheme
+			.scheme__container
+				h2.scheme__title.heading Схема работы
+				h3.scheme__subtitle.heading--sm Как мы работаем
+
+				ul.scheme__list
+					-
+						var schemes = {
+							1:'Оставьте заявку на сайте или позвоните нашим операторам',
+							2:'С вами свяжется менеджер для консультации и составления предварительной сметы',
+							3:'Уточнение деталей,заключение договора',
+							4:'Разработка дизайн-проекта,технического проекта',
+							5:'Строительство объекта и сдача проекта в точный срок',
+							6:'Гарантийное и сервисное обслуживание',
+						}
+
+					each value, index in schemes
+						li.scheme__item.sheme-item
+							.scheme-item__icon
+								img.sheme-item__img(src="images/scheme-icon-"+index+".png", alt="")
+							.scheme-item__row
+								.scheme-item__order 0#{index}
+								.scheme-item__text=value
+		//END SCHEME
+
 		include partails/footer.pug
