@@ -9,26 +9,22 @@ html(lang="ru")
 			.page__content
 
 
-		//START GREETING
-		//END GREETING
+				//START GREETING
+				.greeting
+					h1.greeting__title #[span Работы,] которыми мы гордимся
+				//END GREETING
 
-		//START GREETING
-		//END GREETING
+				//START PORTFOLIO
+				.portfolio
+					ul.portfolio__list
+						each item in portfolioList
+							li.portfolio__item
+								img.portfolio__img(src=item.srcPath, alt="")
+								.portfolio__info
+									p.portfolio__title #{item.text} #{item.blueText}
+									p.portfolio__btn.btn.btn--white Подробнее
+				//END PORTFOLIO
 
-		//START GREETING
-		//END GREETING
-
-		//START GREETING
-		//END GREETING
-
-		//START GREETING
-		//END GREETING
-
-		//START GREETING
-		//END GREETING
-
-		//START GREETING
-		//END GREETING
 
 
 
