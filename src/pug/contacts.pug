@@ -5,27 +5,44 @@ html(lang="ru")
 		include partails/variables.pug
 		include partails/header.pug
 
+		h2.features__title.heading.heading--sm Обратная связь
+		h3.features__subtitle.heading Мы всегда открыты для сотрудничества.Отправьте сообщение с вопросом или предложением
 
-		//START GREETING
-		//END GREETING
+		//START FORM
+		form.contact-form
+			.contact-form__item.form-field
+				label.form-field__label
+					.form-field__span Имя
+					input.form-field__input
 
-		//START GREETING
-		//END GREETING
+			.contact-form__item.form-field
+				label.form-field__label
+					.form-field__span E-mail
+					input.form-field__input.js-input-email
 
-		//START GREETING
-		//END GREETING
+			.contact-form__item.form-field
+				label.form-field__label
+					.form-field__span Номер телефона
+					input.form-field__input.js-input-tel
 
-		//START GREETING
-		//END GREETING
+			.contact-form__item.contact-form__item--wide.form-field
+				label.form-field__label
+					.form-field__span Сообщениe
+					input.form-field__input
 
-		//START GREETING
-		//END GREETING
+			.contact-form__row
+				.contact-form__submit.btn.btn--lightblue Отправить
+				.contact-form__personal-check.form-checkbox
+					input.form-checkbox__input-hidden
+					.form-checkbox__input-custom(type="checkbox")
+					p.form-checkbox__text Согласен на обработку персональных данных в соответствии с ФЗ от 27.07.2006 г. № 152-ФЗ «О персональных данных»
 
-		//START GREETING
-		//END GREETING
+		//END FORM
 
-		//START GREETING
-		//END GREETING
+		//START MAP
+		.map#map
+			// stilization - https://snazzymaps.com/style/151/ultra-light-with-labels
+		//END MAP
 
 
 
