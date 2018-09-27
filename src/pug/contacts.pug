@@ -5,59 +5,62 @@ html(lang="ru")
 		include partails/variables.pug
 		include partails/header.pug
 
-		h2.features__title.heading.heading--sm Обратная связь
-		h3.features__subtitle.heading Мы всегда открыты для сотрудничества.Отправьте сообщение с вопросом или предложением
+		.page
+			.page__contact
 
-		//START FORM
-		form.contact-form
-			.contact-form__item.form-field
-				label.form-field__label
-					.form-field__span Имя
-					input.form-field__input
+				h2.features__title.heading.heading--sm Обратная связь
+				h3.features__subtitle.heading Мы всегда открыты для сотрудничества.Отправьте сообщение с вопросом или предложением
 
-			.contact-form__item.form-field
-				label.form-field__label
-					.form-field__span E-mail
-					input.form-field__input.js-input-email
+				//START FORM
+				form.contact-form
+					.contact-form__item.form-field
+						label.form-field__label
+							.form-field__span Имя
+							input.form-field__input
 
-			.contact-form__item.form-field
-				label.form-field__label
-					.form-field__span Номер телефона
-					input.form-field__input.js-input-tel
+					.contact-form__item.form-field
+						label.form-field__label
+							.form-field__span E-mail
+							input.form-field__input.js-input-email
 
-			.contact-form__item.contact-form__item--wide.form-field
-				label.form-field__label
-					.form-field__span Сообщениe
-					input.form-field__input
+					.contact-form__item.form-field
+						label.form-field__label
+							.form-field__span Номер телефона
+							input.form-field__input.js-input-tel
 
-			.contact-form__row
-				.contact-form__submit.btn.btn--lightblue Отправить
-				.contact-form__personal-check.form-checkbox
-					input.form-checkbox__input-hidden
-					.form-checkbox__input-custom(type="checkbox")
-					p.form-checkbox__text Согласен на обработку персональных данных в соответствии с ФЗ от 27.07.2006 г. № 152-ФЗ «О персональных данных»
+					.contact-form__item.contact-form__item--wide.form-field
+						label.form-field__label
+							.form-field__span Сообщениe
+							input.form-field__input
 
-		//END FORM
+					.contact-form__row
+						.contact-form__submit.btn.btn--lightblue Отправить
+						.contact-form__personal-check.form-checkbox
+							input.form-checkbox__input-hidden
+							.form-checkbox__input-custom(type="checkbox")
+							p.form-checkbox__text Согласен на обработку персональных данных в соответствии с ФЗ от 27.07.2006 г. № 152-ФЗ «О персональных данных»
 
-		//START MAP
-		.map
-			.map__cartography#map
-			.map__info
-				p.heading-sm Контакты
-				p.heading Наши контакты
+				//END FORM
 
-				p.map__subtitle Телефон
-				.map__contacts
-					a.map__phone(href="tel:89184948841" title="Позвонить") 8(918) 49 48 841
-					a.map__email(href="mailto:hello@lUXAR.ru" title="Написать письмо") hello@lUXAR.ru
+				//START MAP
+				.map
+					.map__cartography#map
+					.map__info
+						p.heading-sm Контакты
+						p.heading Наши контакты
 
-
-				p.map__subtitle Адрес
-					a.map__address(href="https://bit.ly/2xOPjXS" target="_blank" title="Проложить маршрут") ул. Уральская 106/2 350078 Краснодар Россия
+						p.map__subtitle Телефон
+						.map__contacts
+							a.map__phone(href="tel:89184948841" title="Позвонить") 8(918) 49 48 841
+							a.map__email(href="mailto:hello@lUXAR.ru" title="Написать письмо") hello@lUXAR.ru
 
 
-			// stilization - https://snazzymaps.com/style/151/ultra-light-with-labels
-		//END MAP
+						p.map__subtitle Адрес
+							a.map__address(href="https://bit.ly/2xOPjXS" target="_blank" title="Проложить маршрут") ул. Уральская 106/2 350078 Краснодар Россия
+
+
+					// stilization - https://snazzymaps.com/style/151/ultra-light-with-labels
+				//END MAP
 
 
 

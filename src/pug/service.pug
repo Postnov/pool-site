@@ -6,110 +6,114 @@ html(lang="ru")
 		include partails/header.pug
 
 
-		//START GREETING
-		.greeting.greting--service
-		//END GREETING
 
-		//START ABOUT
-		.service-about
-			.service-about__container
-				h2.service-about__title Компания #[span «Servicepools»] обеспечивает полный комплекс #[span сервисных услуг]
+		.page
+			.page__content
 
-				.service-about__content
-					p.service-about__descr.
-						Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты.
-						Вдали от всех живут они в буквенных домах на берегу Семантика большого языкового океана. Маленький ручеек Даль журчит по всей стране
-						и обеспечивает ее всеми необходимыми правилами.
-					p.service-about__descr.
-						Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты.
-						Вдали от всех живут они в буквенных домах на берегу Семантика большого языкового океана. Маленький ручеек Даль журчит по всей стране
-						и обеспечивает ее всеми необходимыми правилами.
+				//START GREETING
+				.greeting.greting--service
+				//END GREETING
 
-		//END ABOUT
+				//START ABOUT
+				.service-about
+					.service-about__container
+						h2.service-about__title Компания #[span «Servicepools»] обеспечивает полный комплекс #[span сервисных услуг]
 
+						.service-about__content
+							p.service-about__descr.
+								Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты.
+								Вдали от всех живут они в буквенных домах на берегу Семантика большого языкового океана. Маленький ручеек Даль журчит по всей стране
+								и обеспечивает ее всеми необходимыми правилами.
+							p.service-about__descr.
+								Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты.
+								Вдали от всех живут они в буквенных домах на берегу Семантика большого языкового океана. Маленький ручеек Даль журчит по всей стране
+								и обеспечивает ее всеми необходимыми правилами.
 
-		//START SERVICES POOL
-		section.services-pool
-			.services-pool__container
-				h2.services-pool__title
-				h3.services-pool__subtitle
-
-				ul.services-pool.icon-grid
-					each value, index in servicesPool
-						li.icon-grid__item
-							.icon-grid__icon
-								img.icon-grid__img(src="images/service-pool-icon-"+index+".png", alt="")
-							p.icon-grid__text=value
-
-		//END SERVICES POOL
+				//END ABOUT
 
 
-		//START DINAMIC
-		section.dinamic
-			.dinamic__container
-				h2.dinamic__title
-				h3.dinamic__subtitle
+				//START SERVICES POOL
+				section.services-pool
+					.services-pool__container
+						h2.services-pool__title
+						h3.services-pool__subtitle
 
-				.dinamic__content
-					.dinamic__tabs.tabs-dinamic
-						ul.dinamic__tabs-triggers
-							li.dinamic__tabs-trigger Выполненные работы
-							li.dinamic__tabs-trigger Loreprimua dolord
-							li.dinamic__tabs-trigger Штат компании
-							li.dinamic__tabs-trigger Клиенты
+						ul.services-pool.icon-grid
+							each value, index in servicesPool
+								li.icon-grid__item
+									.icon-grid__icon
+										img.icon-grid__img(src="images/service-pool-icon-"+index+".png", alt="")
+									p.icon-grid__text=value
 
-						ul.dinamic__tabs-conteiners
-							li.dinamic__tabs-conteiner.dinamic-container
-								.dinamic-container__title Штат компании более #[span 127] человек
-								.dinamic-container__row
-									.dinamic-container__value 72
-									.dinamic-container__time 2016-2017
-									.dinamic-container__animation-line
-
-								.dinamic-container__row
-									.dinamic-container__value 55
-									.dinamic-container__time 2014-2015
-									.dinamic-container__animation-line
-
-							li.dinamic__tabs-conteiner.dinamic-container
-								.dinamic-container__title Штат компании более #[span 127] человек
-								.dinamic-container__row
-									.dinamic-container__value 72
-									.dinamic-container__time 2016-2017
-									.dinamic-container__animation-line
-
-								.dinamic-container__row
-									.dinamic-container__value 55
-									.dinamic-container__time 2014-2015
-									.dinamic-container__animation-line
-
-							li.dinamic__tabs-conteiner.dinamic-container
-								.dinamic-container__title Штат компании более #[span 127] человек
-								.dinamic-container__row
-									.dinamic-container__value 72
-									.dinamic-container__time 2016-2017
-									.dinamic-container__animation-line
-
-								.dinamic-container__row
-									.dinamic-container__value 55
-									.dinamic-container__time 2014-2015
-									.dinamic-container__animation-line
-
-							li.dinamic__tabs-conteiner.dinamic-container
-								.dinamic-container__title Штат компании более #[span 127] человек
-								.dinamic-container__row
-									.dinamic-container__value 72
-									.dinamic-container__time 2016-2017
-									.dinamic-container__animation-line
-
-								.dinamic-container__row
-									.dinamic-container__value 55
-									.dinamic-container__time 2014-2015
-									.dinamic-container__animation-line
+				//END SERVICES POOL
 
 
+				//START DINAMIC
+				section.dinamic
+					.dinamic__container
+						h2.dinamic__title
+						h3.dinamic__subtitle
+
+						.dinamic__content
+							.dinamic__tabs.tabs-dinamic
+								ul.dinamic__tabs-triggers
+									li.dinamic__tabs-trigger Выполненные работы
+									li.dinamic__tabs-trigger Loreprimua dolord
+									li.dinamic__tabs-trigger Штат компании
+									li.dinamic__tabs-trigger Клиенты
+
+								ul.dinamic__tabs-conteiners
+									li.dinamic__tabs-conteiner.dinamic-container
+										.dinamic-container__title Штат компании более #[span 127] человек
+										.dinamic-container__row
+											.dinamic-container__value 72
+											.dinamic-container__time 2016-2017
+											.dinamic-container__animation-line
+
+										.dinamic-container__row
+											.dinamic-container__value 55
+											.dinamic-container__time 2014-2015
+											.dinamic-container__animation-line
+
+									li.dinamic__tabs-conteiner.dinamic-container
+										.dinamic-container__title Штат компании более #[span 127] человек
+										.dinamic-container__row
+											.dinamic-container__value 72
+											.dinamic-container__time 2016-2017
+											.dinamic-container__animation-line
+
+										.dinamic-container__row
+											.dinamic-container__value 55
+											.dinamic-container__time 2014-2015
+											.dinamic-container__animation-line
+
+									li.dinamic__tabs-conteiner.dinamic-container
+										.dinamic-container__title Штат компании более #[span 127] человек
+										.dinamic-container__row
+											.dinamic-container__value 72
+											.dinamic-container__time 2016-2017
+											.dinamic-container__animation-line
+
+										.dinamic-container__row
+											.dinamic-container__value 55
+											.dinamic-container__time 2014-2015
+											.dinamic-container__animation-line
+
+									li.dinamic__tabs-conteiner.dinamic-container
+										.dinamic-container__title Штат компании более #[span 127] человек
+										.dinamic-container__row
+											.dinamic-container__value 72
+											.dinamic-container__time 2016-2017
+											.dinamic-container__animation-line
+
+										.dinamic-container__row
+											.dinamic-container__value 55
+											.dinamic-container__time 2014-2015
+											.dinamic-container__animation-line
 
 
-		//END DINAMIC
+
+
+				//END DINAMIC
 
 		include partails/footer.pug

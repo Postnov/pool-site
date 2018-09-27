@@ -6,46 +6,48 @@ html(lang="ru")
 		include partails/header.pug
 
 		.page
-			//START DETAIL CONTENT
-			.detail
-				.detail__content
-					.detail__sliders
-						.detail-slider-main.js-detail-main-slider
-							each i in [1,2,3,4]
-								.detail-slider-main__item
-									img.detail-slider-main__img(src="images/detail-main-img-1.jpg")
-						.detail-slider-nav.js-detail-nav-slider
-							each i in [2,3,4]
-								.detail-slider-nav__item
-									img.detail-slider-nav__img(src="images/detail-img-"+i+".jpg")
-					.detail__info.detail-info
-						h1.detail-info__title
-						p.detail-info__descr
+			.page__content
 
-						ul.detail-info__params.detail-params
-							each item in detailParams
-								li.detail-params__item
-									p.detail-params__text
-										span.detail-params__title=item.title
-										if item.subtitle
-											span.detail-params__subtitle=item.subtitle
-									p.detail-params__value=item.value
+				//START DETAIL CONTENT
+				.detail
+					.detail__content
+						.detail__sliders
+							.detail-slider-main.js-detail-main-slider
+								each i in [1,2,3,4]
+									.detail-slider-main__item
+										img.detail-slider-main__img(src="images/detail-main-img-1.jpg")
+							.detail-slider-nav.js-detail-nav-slider
+								each i in [2,3,4]
+									.detail-slider-nav__item
+										img.detail-slider-nav__img(src="images/detail-img-"+i+".jpg")
+						.detail__info.detail-info
+							h1.detail-info__title
+							p.detail-info__descr
 
-						a.detail__btn.btn.btn--lightblue(href="#") Заказать
-			//END DETAIL CONTENT
+							ul.detail-info__params.detail-params
+								each item in detailParams
+									li.detail-params__item
+										p.detail-params__text
+											span.detail-params__title=item.title
+											if item.subtitle
+												span.detail-params__subtitle=item.subtitle
+										p.detail-params__value=item.value
 
-			//START REVIEWS
-			.reviews
-				.heading-sm Отзывы
-				.heading Наши клиенты говорят о нас
-				.reviews__list.reviews-slider
-					each review in reviews
-						.review
-							p.review__text Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat a aliquam expedita ducimus odit, alias iusto optio libero delectus reprehenderit?
-							span.review__sign=review.name
-							.review__img-wrapp
-								img.reviews__img(src=review.src alt="Фото клиента: " + review.name)
-			//END REVIEWS
+							a.detail__btn.btn.btn--lightblue(href="#") Заказать
+				//END DETAIL CONTENT
+
+				//START REVIEWS
+				.reviews
+					.heading-sm Отзывы
+					.heading Наши клиенты говорят о нас
+					.reviews__list.reviews-slider
+						each review in reviews
+							.review
+								p.review__text Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat a aliquam expedita ducimus odit, alias iusto optio libero delectus reprehenderit?
+								span.review__sign=review.name
+								.review__img-wrapp
+									img.reviews__img(src=review.src alt="Фото клиента: " + review.name)
+				//END REVIEWS
 
 
 
