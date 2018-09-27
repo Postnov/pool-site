@@ -13,6 +13,7 @@
     "tests"
   ],
   "dependencies": {
-    "normalize.css": "*"
+    "normalize.css": "*",
+    "animate.css": "^3.7.0"
   }
 }
