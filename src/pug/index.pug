@@ -10,14 +10,14 @@ html(lang="ru")
 			.page__content
 
 				//START GREETING
-				section.greeting
-					h1.greeting__title #[span Вода] облеченная в совершенство
+				section.greeting(style="background-image: url('images/main-header-bg.jpg')")
+					h1.greeting__title.headline-blue #[span Вода] облеченная в совершенство
 				//END GREETING
 
 				//START SERVICES
 				section.services
-					.services__container
-						h2.services__title.headline--sm Услуги
+					.services__container.container
+						h2.services__title.headline.headline--sm Услуги
 						h3.services__subtitle.headline Мы предлагаем широкий спектр услуг, а именно:
 
 						ul.services__list.services-grid
@@ -31,9 +31,9 @@ html(lang="ru")
 
 				//START FEATURES
 				section.features
-					.features__container
+					.features__container.container
 						h2.features__title.headline Преимущества
-						h3.features__subtitle.headline--sm Мы объединили лучшие качества
+						h3.features__subtitle.headline.headline--sm Мы объединили лучшие качества
 
 						ul.features__icon-list.icon-grid
 							each value, index in features
@@ -46,9 +46,9 @@ html(lang="ru")
 
 				//START SCHEME
 				section.scheme
-					.scheme__container
+					.scheme__container.container
 						h2.scheme__title.headline Схема работы
-						h3.scheme__subtitle.headline--sm Как мы работаем
+						h3.scheme__subtitle.headline.headline--sm Как мы работаем
 
 						ul.scheme__list
 
