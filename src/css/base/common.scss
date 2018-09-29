@@ -1,0 +1,31 @@
+.headline {
+    font-size: 34px;
+    margin: 0;
+    max-width: 580px;
+    font-weight: 400;
+
+    &--sm {
+        font-size: 20px;
+        color: $dark-blue;
+        margin-bottom: 11px;
+        letter-spacing: -0.47px;
+    }
+}
+
+
+.headline-blue {
+    span {
+        color: $blue;
+    }
+}
+
+.container {
+    width: 100%;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+

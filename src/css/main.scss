@@ -16,6 +16,7 @@
 @import '../../bower_components/normalize/normalize';
 @import 'base/media-mixin.scss';
 @import 'base/base.scss';
+@import 'base/common.scss';
 
 
 //components
@@ -23,8 +24,10 @@
 @import 'components/contacts.scss';
 @import 'components/detail.scss';
 @import 'components/dinamic.scss';
+@import 'components/features.scss';
 @import 'components/footer.scss';
 @import 'components/form.scss';
+@import 'components/greeting.scss';
 @import 'components/header.scss';
 @import 'components/icon-grid.scss';
 @import 'components/index.scss';

@@ -1,0 +1,26 @@
+/* FEATURES STYLES */
+
+.features {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-image: url('../images/features-bg.jpg');
+
+    padding: 60px 80px;
+
+    &__title {
+        color: #25d4d4;
+        font-size: 22px;
+        margin-bottom: 20px;
+    }
+
+    &__subtitle {
+        color: #fff;
+        max-width: 470px;
+        line-height: 1.2;
+
+        margin-bottom: 40px;
+    }
+}
+
+/* END FEATURES STYLES */
