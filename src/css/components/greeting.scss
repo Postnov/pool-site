@@ -9,8 +9,23 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+    background-color: #044483;
+
+    &:after {
+        content:'';
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background-color: rgba(0, 0, 0, .2);
+    }
+
+    &--saunas {
+        height: 300px;
+    }
 
     &__title {
+        z-index: 2;
         // Style for "Вода облеч"
         max-width: 382px;
         color: #fff;

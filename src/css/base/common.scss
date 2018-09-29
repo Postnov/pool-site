@@ -1,7 +1,7 @@
 .headline {
     font-size: 34px;
     margin: 0;
-    max-width: 580px;
+    max-width: 600px;
     font-weight: 400;
 
     &--sm {
@@ -29,3 +29,9 @@
 }
 
 
+.water-gray-bg {
+    background-image: url('../images/service-footer-bg.jpg');
+    background-repeat: no-repeat;
+    background-position: center bottom -450px;
+    background-size: 110% auto;
+}

@@ -7,18 +7,19 @@ html(lang="ru")
 
 
 		.page
-			.page__content
+			.page__content.water-gray-bg
 
 				//START GREETING
-				section.greeting.greeting--saunas
+				section.greeting.greeting--saunas(style="background-image: url('images/sauna-header-bg.jpg');")
 					h1.greeting__title Сауны
 				//END GREETING
 
 				//START SERVICES
-				section.services
+				section.services.services--pools
 					.services__container.container
-						h2.services__title.headline Услуги
-						h3.services__subtitle.headline.headline--sm Строительство саун под ключ,применение последних технологий
+						.services__header
+							h2.services__title.headline.headline--sm Услуги
+							h3.services__subtitle.headline Строительство саун под ключ, применение последних технологий
 
 						ul.services__list.services-grid
 							each item, index in servicesSaunas
