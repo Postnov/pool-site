@@ -8,18 +8,19 @@ html(lang="ru")
 
 
 		.page
-			.page__content
+			.page__content.water-gray-bg
 
 				//START GREETING
-				section.greeting.greeting--saunas
-					h1.greeting__title #[span Услуги] Servicepools
+				section.greeting.greeting--sm(style="background-image: url('images/services-header-bg.jpg')")
+					h1.greeting__title.greeting__title--dark-span #[span Услуги] Servicepools
 				//END GREETING
 
 				//START SERVICES
-				section.services
+				section.services.services--page-services
 					.services__container.container
-						h2.services__title.headline Услуги
-						h3.services__subtitle.headline.headline--sm Мы предлагаем широкий спектр услуг, а именно:
+						header.services__header
+							h2.services__title.headline Услуги
+							h3.services__subtitle.headline.headline--sm Мы предлагаем широкий спектр услуг, а именно:
 
 						ul.services__list.services-grid
 							each item, index in services

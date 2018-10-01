@@ -10,17 +10,22 @@
     justify-content: center;
     align-items: center;
     position: relative;
-    background-color: #044483;
+    background-color: #5799da;
 
-    &:after {
-        content:'';
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        background-color: rgba(0, 0, 0, .2);
+    &--overlay {
+        &:after {
+            content:'';
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            background-color: rgba(0, 0, 0, .2);
+        }
     }
 
-    &--saunas {
+
+
+
+    &--sm {
         height: 300px;
     }
 
@@ -33,6 +38,24 @@
         line-height: 1.1;
         margin: 0;
         font-weight: 400;
+
+
+
+        span {
+            color: #3dc7fa;
+        }
+
+        &--dark {
+            color: $dark;
+        }
+
+        &--dark-span {
+            max-width: 500px;
+            span {
+                color: $dark;
+            }
+        }
+
     }
 }
 
