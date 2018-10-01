@@ -1,2 +1,103 @@
 /* PORTFOLIO STYLES */
+.portfolio {
+    margin-top: 90px;
+    background-size: 100% auto;
+    background-position: center top;
+    background-repeat: no-repeat;
+
+
+    &__list {
+        padding-left: 0;
+        list-style: none;
+    }
+
+    &__item {
+        position: relative;
+        display: flex;
+        justify-content: flex-end;
+        margin-bottom: 78px;
+    }
+
+    &__btn-more {
+        padding: 16px;
+        border: 2px solid #00f;
+        display: block;
+        width: 90%;
+        max-width: 280px;
+        margin: 100px auto;
+        text-align: center;
+        border-radius: 30px;
+        color: #044483;
+        font-weight: 600;
+        font-size: 18px;
+        color: #044483;
+        letter-spacing: -0.42px;
+        text-transform: uppercase;
+        text-decoration: none;
+    }
+
+
+}
+
+
+
+.portfolio-item {
+
+    &:hover &__info {
+        background-color: rgba(0, 0, 0, .8);
+    }
+
+    &__info {
+        position: absolute;
+        right: 0;
+        height: 100%;
+        top: 0;
+
+        background-color: rgba(0, 0, 0, .3);
+
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        width: 48%;
+        padding: 37px;
+
+        transition: .3s all;
+    }
+
+    &__title {
+        font-size: 22px;
+        letter-spacing: -0.51px;
+        line-height: 1;
+        color: #fff;
+        margin: 0;
+    }
+
+    &__subtitle {
+        font-size: 24px;
+        color: #3dc7fa;
+        margin: 0;
+    }
+
+    &__btn {
+        color: #feffff;
+        font-family: $opensans;
+        font-weight: 900;
+        font-size: 14px;
+        line-height: 29.02px;
+        letter-spacing: -0.43px;
+        text-transform: uppercase;
+        padding: 6px 53px;
+        border: 2px solid #fff;
+        border-radius: 40px;
+        transition: .3s all;
+        text-decoration: none;
+
+        &:hover {
+            color: $blue;
+            border-color: $blue;
+            cursor: pointer;
+        }
+    }
+}
+
 /* END PORTFOLIO STYLES */

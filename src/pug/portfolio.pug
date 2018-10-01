@@ -7,22 +7,24 @@ html(lang="ru")
 
 		.page
 			.page__content
-
-
 				//START GREETING
-				.greeting
-					h1.greeting__title #[span Работы,] которыми мы гордимся
+				.greeting(style="background-image: url('images/portfolio-bg.jpg')")
+					h1.greeting__title.greeting__title--dark #[span Работы,] которыми мы гордимся
 				//END GREETING
 
 				//START PORTFOLIO
 				.portfolio
-					ul.portfolio__list
-						each item in portfolioList
-							li.portfolio__item
-								img.portfolio__img(src=item.srcPath, alt="")
-								.portfolio__info
-									p.portfolio__title #{item.text} #{item.blueText}
-									p.portfolio__btn.btn.btn--white Подробнее
+					.portfolio__container.container
+						ul.portfolio__list
+							each item in portfolioList
+								li.portfolio__item.portfolio-item
+									img.portfolio-item__img(src=item.srcPath, alt="")
+									.portfolio-item__info
+										.portfolio-item__text
+											p.portfolio-item__title #{item.text}
+											p.portfolio-item__subtitle #{item.blueText}
+										a.portfolio-item__btn.btn.btn--white(href="#") Подробнее
+						a.portfolio__btn-more(href="#") Больше проектов
 				//END PORTFOLIO
 
 
