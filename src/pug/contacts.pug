@@ -5,58 +5,60 @@ html(lang="ru")
 		include partails/variables.pug
 		include partails/header.pug
 
-		.page
-			.page__content.container
-
-				h2.features__title.headline.headline--sm Обратная связь
-				h3.features__subtitle.headline Мы всегда #[span открыты] для сотрудничества.Отправьте сообщение #[span с вопросом или предложением]
+		.page.page-contact.line-top
+			.page__content.page-contact__content
+				.page__header.container
+					h2.page-contact__title.headline.headline--sm Обратная связь
+					h3.page-contact__subtitle.headline.headline-blue Мы всегда #[span открыты] для сотрудничества. Отправьте сообщение #[span с вопросом или предложением]
 
 				//START FORM
-				form.contact-form
-					.contact-form__item.form-field
-						label.form-field__label
-							.form-field__span Имя
-							input.form-field__input
+				form.contact-form.page-contact__form.container
+					.contact-form__grid
+						.contact-form__item.field-item
+							label.field-item__label
+								.field-item__label-name.js-contact-field-label Имя
+								input.field-item__input.js-contact-field
 
-					.contact-form__item.form-field
-						label.form-field__label
-							.form-field__span E-mail
-							input.form-field__input.js-input-email
+						.contact-form__item.field-item
+							label.field-item__label
+								.field-item__label-name.js-contact-field-label E-mail
+								input.field-item__input.js-contact-field
 
-					.contact-form__item.form-field
-						label.form-field__label
-							.form-field__span Номер телефона
-							input.form-field__input.js-input-tel
+						.contact-form__item.field-item
+							label.field-item__label
+								.field-item__label-name.js-contact-field-label Номер телефона
+								input.field-item__input.js-contact-field.js-input-tel
 
-					.contact-form__item.contact-form__item--wide.form-field
-						label.form-field__label
-							.form-field__span Сообщениe
-							input.form-field__input
+						.contact-form__item.contact-form__item--message.contact-form__item--wide.field-item
+							label.field-item__label
+								.field-item__label-name.js-contact-field-label Сообщениe
+								input.field-item__input.js-contact-field
 
 					.contact-form__row
-						.contact-form__submit.btn.btn--lightblue Отправить
-						.contact-form__personal-check.form-checkbox
-							input.form-checkbox__input-hidden
-							.form-checkbox__input-custom(type="checkbox")
+						a.contact-form__submit.btn Отправить
+						label.contact-form__personal-check.form-checkbox
+							input.form-checkbox__input-hidden(type="checkbox")
+							.form-checkbox__input-custom
 							p.form-checkbox__text Согласен на обработку персональных данных в соответствии с ФЗ от 27.07.2006 г. № 152-ФЗ «О персональных данных»
 
 				//END FORM
 
-				//START MAP
-				.map
-					.map__cartography#map
-					.map__info
-						p.headline.headline--sm Контакты
-						p.headline Наши контакты
+			//START MAP
+			.map
+				.map__cartography#contact-map
+				.map__info.map-info
+					p.map__title.headline.headline--sm Контакты
+					p.map__subtitle.headline Наши контакты
 
-						p.map__subtitle Телефон
-						.map__contacts
-							a.map__phone(href="tel:89184948841" title="Позвонить") 8(918) 49 48 841
-							a.map__email(href="mailto:hello@lUXAR.ru" title="Написать письмо") hello@lUXAR.ru
+					p.map-info__title Телефон
+					.map-info__block
+						a.map-info__phone(href="tel:89184948841" title="Позвонить") 8(918) 49 48 841
+						a.map-info__email(href="mailto:hello@lUXAR.ru" title="Написать письмо") hello@lUXAR.ru
 
 
-						p.map__subtitle Адрес
-							a.map__address(href="https://bit.ly/2xOPjXS" target="_blank" title="Проложить маршрут") ул. Уральская 106/2 350078 Краснодар Россия
+					p.map-info__title Адрес
+					.map-info__block
+						a.map-info__address(href="https://bit.ly/2xOPjXS" target="_blank" title="Проложить маршрут") ул. Уральская 106/2 350078 Краснодар Россия
 
 
 					// stilization - https://snazzymaps.com/style/151/ultra-light-with-labels
@@ -65,3 +67,5 @@ html(lang="ru")
 
 
 		include partails/footer.pug
+
+
