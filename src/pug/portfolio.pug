@@ -17,14 +17,14 @@ html(lang="ru")
 					.portfolio__container.container
 						ul.portfolio__list
 							each item in portfolioList
-								li.portfolio__item.portfolio-item
+								li.portfolio__item.portfolio-item.fadeInUp.wow
 									img.portfolio-item__img(src=item.srcPath, alt="")
 									.portfolio-item__info
 										.portfolio-item__text
 											p.portfolio-item__title #{item.text}
 											p.portfolio-item__subtitle #{item.blueText}
 										a.portfolio-item__btn.btn.btn--white(href="#") Подробнее
-						a.portfolio__btn-more.btn(href="#") Больше проектов
+						a.portfolio__btn-more.btn.fadeInUp.wow(href="#") Больше проектов
 				//END PORTFOLIO
 
 

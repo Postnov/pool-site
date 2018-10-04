@@ -17,13 +17,13 @@ html(lang="ru")
 				//START SERVICES
 				section.services.services--pools
 					.services__container.container
-						.services__header
+						header.services__header.fadeInDown.wow
 							h2.services__title.headline.headline--sm Услуги
 							h3.services__subtitle.headline Строительство саун под ключ, применение последних технологий
 
 						ul.services__list.services-grid
 							each item, index in servicesSaunas
-								li.services-grid__item
+								li.services-grid__item.flipInX.wow
 									a.services-grid__wrap-link(href="#")
 										img.services-grid__img(src="images/service-item-"+index+".jpg", alt="")
 										.services-grid__content

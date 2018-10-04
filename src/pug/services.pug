@@ -18,13 +18,13 @@ html(lang="ru")
 				//START SERVICES
 				section.services.services--page-services
 					.services__container.container
-						header.services__header
+						header.services__header.fadeInDown.wow
 							h2.services__title.headline Услуги
 							h3.services__subtitle.headline.headline--sm Мы предлагаем широкий спектр услуг, а именно:
 
 						ul.services__list.services-grid
 							each item, index in services
-								li.services-grid__item.services-grid__item--active
+								li.services-grid__item.flipInX.wow
 									a.services-grid__wrap-link(href="#")
 										img.services-grid__img(src="images/service-item-"+index+".jpg", alt="")
 										.services-grid__content

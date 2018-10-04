@@ -17,14 +17,14 @@ html(lang="ru")
 				//START ABOUT
 				.service-about
 					.service-about__container.container
-						h2.service-about__title.headline Компания #[span «Servicepools»] обеспечивает полный комплекс #[span сервисных услуг]
+						h2.service-about__title.headline.fadeInLeft.wow Компания #[span «Servicepools»] обеспечивает полный комплекс #[span сервисных услуг]
 
 						.service-about__content
-							p.service-about__descr.
+							p.service-about__descr.fadeInUp.wow.
 								Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты.
 								Вдали от всех живут они в буквенных домах на берегу Семантика большого языкового океана. Маленький ручеек Даль журчит по всей стране
 								и обеспечивает ее всеми необходимыми правилами.
-							p.service-about__descr.
+							p.service-about__descr.fadeInUp.wow.
 								Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты.
 								Вдали от всех живут они в буквенных домах на берегу Семантика большого языкового океана. Маленький ручеек Даль журчит по всей стране
 								и обеспечивает ее всеми необходимыми правилами.
@@ -35,12 +35,12 @@ html(lang="ru")
 				//START SERVICES POOL
 				section.service-pool
 					.service-pool__container.container
-						h2.service-pool__title.headline.headline--sm Сервис
-						h3.service-pool__subtitle.headline Комплексное обслуживание бассейнов
+						h2.service-pool__title.headline.headline--sm.fadeInLeft.wow Сервис
+						h3.service-pool__subtitle.headline.fadeInLeft.wow Комплексное обслуживание бассейнов
 
 						ul.service-pool__grid.icon-grid
 							each value, index in servicesPool
-								li.icon-grid__item
+								li.icon-grid__item.fadeInUp.wow
 									.icon-grid__icon
 										img.icon-grid__img(src="images/service-pool-icon-"+index+".png", alt="")
 									p.icon-grid__text=value
@@ -51,13 +51,13 @@ html(lang="ru")
 				//START DINAMIC
 				section.dinamic
 					.dinamic__container.container
-						h2.dinamic__title.headline.headline--sm Статистика
-						h3.dinamic__subtitle.headline Динамики развития компании #[span «Servicepools»] в цифрах
+						h2.dinamic__title.headline.headline--sm.fadeInDown.wow Статистика
+						h3.dinamic__subtitle.headline.fadeInDown.wow Динамики развития компании #[span «Servicepools»] в цифрах
 
 
 
 
-						.dinamic__content
+						.dinamic__content.fadeInUp.wow
 							ul.dinamic__tabs-triggers
 								li.dinamic__tabs-trigger.active.js-tab-trigger(data-tab="works") Выполненные работы
 								li.dinamic__tabs-trigger.js-tab-trigger(data-tab="lorem") Кофе

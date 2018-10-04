@@ -17,13 +17,13 @@ html(lang="ru")
 				//START SERVICES
 				section.services.services--main
 					.services__container.container
-						header.services__header
+						header.services__header.fadeInDown.wow
 							h2.services__title.headline.headline--sm Услуги
 							h3.services__subtitle.headline Мы предлагаем широкий спектр услуг, а именно:
 
 						ul.services__list.services-grid
 							each item, index in services
-								li.services-grid__item
+								li.services-grid__item.flipInX.wow
 									a.services-grid__wrap-link(href="#")
 										img.services-grid__img(src="images/service-item-"+index+".jpg", alt="")
 										.services-grid__content
@@ -34,13 +34,13 @@ html(lang="ru")
 				//START FEATURES
 				section.features
 					.features__container.container
-						h2.features__title.headline.headline--sm Преимущества
-						h3.features__subtitle.headline Мы объединили лучшие качества
+						h2.features__title.headline.headline--sm.fadeInDown.wow Преимущества
+						h3.features__subtitle.headline.fadeInDown.wow Мы объединили лучшие качества
 
 						ul.features__icon-list.icon-grid
 							each value, index in features
 								li.icon-grid__item
-									.icon-grid__icon
+									.icon-grid__icon.rotateIn.wow
 										img.icon-grid__img(src="images/features-icon-"+index+".png", alt="")
 									p.icon-grid__text=value
 
@@ -49,13 +49,13 @@ html(lang="ru")
 				//START SCHEME
 				section.scheme
 					.scheme__container.container
-						h2.scheme__title.headline.headline--sm Схема работы
-						h3.scheme__subtitle.headline Как мы работаем
+						h2.scheme__title.headline.headline--sm.fadeInDown.wow Схема работы
+						h3.scheme__subtitle.headline.fadeInDown.wow Как мы работаем
 
 						ul.scheme__list
 
 							each value, index in schemes
-								li.scheme__item.scheme-item
+								li.scheme__item.scheme-item.rotateInDownLeft.wow
 									.scheme-item__icon
 										img.sheme-item__img(src="images/scheme-icon-"+index+".png", alt="")
 									.scheme-item__row
