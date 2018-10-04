@@ -24,10 +24,11 @@ html(lang="ru")
 						ul.services__list.services-grid
 							each item, index in servicesSaunas
 								li.services-grid__item
-									img.services-grid__img(src="images/service-item-"+index+".jpg", alt="")
-									.services-grid__content
-										p.services-grid__title=item.title
-										p.services-grid__descr=item.descr
+									a.services-grid__wrap-link(href="#")
+										img.services-grid__img(src="images/service-item-"+index+".jpg", alt="")
+										.services-grid__content
+											p.services-grid__title=item.title
+											p.services-grid__descr=item.descr
 				//END SERVICES
 
 		include partails/footer.pug
