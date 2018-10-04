@@ -11,13 +11,13 @@ html(lang="ru")
 			.page__content
 
 				//START GREETING
-				.greeting.greting--service
+				.greeting.greting--service(style="background-image: url('images/service-header-bg.jpg')")
 				//END GREETING
 
 				//START ABOUT
 				.service-about
 					.service-about__container.container
-						h2.service-about__title Компания #[span «Servicepools»] обеспечивает полный комплекс #[span сервисных услуг]
+						h2.service-about__title.headline Компания #[span «Servicepools»] обеспечивает полный комплекс #[span сервисных услуг]
 
 						.service-about__content
 							p.service-about__descr.
@@ -33,12 +33,12 @@ html(lang="ru")
 
 
 				//START SERVICES POOL
-				section.services-pool
-					.services-pool__container.container
-						h2.services-pool__title
-						h3.services-pool__subtitle
+				section.service-pool
+					.service-pool__container.container
+						h2.service-pool__title.headline.headline--sm Сервис
+						h3.service-pool__subtitle.headline Комплексное обслуживание бассейнов
 
-						ul.services-pool.icon-grid
+						ul.service-pool__grid.icon-grid
 							each value, index in servicesPool
 								li.icon-grid__item
 									.icon-grid__icon
@@ -51,67 +51,75 @@ html(lang="ru")
 				//START DINAMIC
 				section.dinamic
 					.dinamic__container.container
-						h2.dinamic__title
-						h3.dinamic__subtitle
+						h2.dinamic__title.headline.headline--sm Статистика
+						h3.dinamic__subtitle.headline Динамики развития компании #[span «Servicepools»] в цифрах
+
+
+
 
 						.dinamic__content
-							.dinamic__tabs.tabs-dinamic
-								ul.dinamic__tabs-triggers
-									li.dinamic__tabs-trigger Выполненные работы
-									li.dinamic__tabs-trigger Loreprimua dolord
-									li.dinamic__tabs-trigger Штат компании
-									li.dinamic__tabs-trigger Клиенты
+							ul.dinamic__tabs-triggers
+								li.dinamic__tabs-trigger.active.js-tab-trigger(data-tab="works") Выполненные работы
+								li.dinamic__tabs-trigger.js-tab-trigger(data-tab="lorem") Кофе
+								li.dinamic__tabs-trigger.js-tab-trigger(data-tab="staff") Штат компании
+								li.dinamic__tabs-trigger.js-tab-trigger(data-tab="clients") Клиенты
 
-								ul.dinamic__tabs-conteiners
-									li.dinamic__tabs-conteiner.dinamic-container
-										.dinamic-container__title Штат компании более #[span 127] человек
+							ul.dinamic__tabs-containers
+								li.dinamic__tabs-container.dinamic-container.active.js-tab-content(data-tab="works")
+									.dinamic-container__title Проложено более  #[span.js-increment(data-number="12 000 000") 0] метров
+									.dinamic-container__progress-block.js-dinamic-animation
 										.dinamic-container__row
-											.dinamic-container__value 72
+											.dinamic-container__value.js-dinamic-value 8 425 000
 											.dinamic-container__time 2016-2017
-											.dinamic-container__animation-line
+										.dinamic-container__line
 
+									.dinamic-container__progress-block.js-dinamic-animation
 										.dinamic-container__row
-											.dinamic-container__value 55
+											.dinamic-container__value.js-dinamic-value 4 666 000
 											.dinamic-container__time 2014-2015
-											.dinamic-container__animation-line
+										.dinamic-container__line
 
-									li.dinamic__tabs-conteiner.dinamic-container
-										.dinamic-container__title Штат компании более #[span 127] человек
+								li.dinamic__tabs-container.dinamic-container.js-tab-content(data-tab="lorem")
+									.dinamic-container__title #[span.js-increment(data-number="24 000") 0] чашек кофе выпито клиентами в наших офисах
+									.dinamic-container__progress-block.js-dinamic-animation
 										.dinamic-container__row
-											.dinamic-container__value 72
+											.dinamic-container__value.js-dinamic-value 14 000
 											.dinamic-container__time 2016-2017
-											.dinamic-container__animation-line
+										.dinamic-container__line
 
+									.dinamic-container__progress-block.js-dinamic-animation
 										.dinamic-container__row
-											.dinamic-container__value 55
+											.dinamic-container__value.js-dinamic-value 10 000
 											.dinamic-container__time 2014-2015
-											.dinamic-container__animation-line
+										.dinamic-container__line
 
-									li.dinamic__tabs-conteiner.dinamic-container
-										.dinamic-container__title Штат компании более #[span 127] человек
+								li.dinamic__tabs-container.dinamic-container.js-tab-content(data-tab="staff")
+									.dinamic-container__title Штат компании более #[span.js-increment(data-number="127") 0] человек
+									.dinamic-container__progress-block.js-dinamic-animation
 										.dinamic-container__row
-											.dinamic-container__value 72
+											.dinamic-container__value.js-dinamic-value 97
 											.dinamic-container__time 2016-2017
-											.dinamic-container__animation-line
+										.dinamic-container__line
 
+									.dinamic-container__progress-block.js-dinamic-animation
 										.dinamic-container__row
-											.dinamic-container__value 55
+											.dinamic-container__value.js-dinamic-value 37
 											.dinamic-container__time 2014-2015
-											.dinamic-container__animation-line
+										.dinamic-container__line
 
-									li.dinamic__tabs-conteiner.dinamic-container
-										.dinamic-container__title Штат компании более #[span 127] человек
+								li.dinamic__tabs-container.dinamic-container.js-tab-content(data-tab="clients")
+									.dinamic-container__title Более #[span.js-increment(data-number="12 000") 0] довольных клиентов
+									.dinamic-container__progress-block.js-dinamic-animation
 										.dinamic-container__row
-											.dinamic-container__value 72
+											.dinamic-container__value.js-dinamic-value 7500
 											.dinamic-container__time 2016-2017
-											.dinamic-container__animation-line
+										.dinamic-container__line
 
+									.dinamic-container__progress-block.js-dinamic-animation
 										.dinamic-container__row
-											.dinamic-container__value 55
+											.dinamic-container__value.js-dinamic-value 4000
 											.dinamic-container__time 2014-2015
-											.dinamic-container__animation-line
-
-
+										.dinamic-container__line
 
 
 				//END DINAMIC

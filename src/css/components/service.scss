@@ -1,0 +1,213 @@
+.service-about {
+    padding-bottom: 100px;
+
+    &__title {
+        margin-top: 93px;
+        margin-bottom: 55px;
+
+        span {
+            color: $blue;
+        }
+    }
+
+    &__content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    &__descr {
+        width: 45%;
+
+        padding-left: 60px;
+        position: relative;
+
+        color: #5e5c62;
+        font-size: 16px;
+        line-height: 22px;
+
+        &:before {
+            content: '';
+            width: 41px;
+            height: 22px;
+            display: inline-block;
+            background-image: url('../images/wave-icon.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    }
+}
+
+
+.service-pool {
+    background-image: url('../images/service-pool-bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 70px 0 80px 0;
+
+    &__title {
+        color: #25d4d4;
+    }
+
+    &__subtitle {
+        color: #fff;
+        margin-bottom: 50px;
+    }
+
+    &__grid{
+        justify-content: space-between;
+    }
+
+    .icon-grid__item {
+        width: 33%;
+        margin: 0 0 60px;
+    }
+
+    .icon-grid__text {
+        max-width: 200px;
+        text-align: left;
+    }
+}
+
+
+.dinamic {
+    padding: 70px 0;
+    min-height: 320px;
+    background-image: url('../images/wave-bg.png');
+    background-position: 0 125%;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-color: #fff;
+    padding-bottom: 150px;
+
+    &__content {
+        border: 1px solid #ebebeb;
+        height: 322px;
+        position: relative;
+        background-color: #fff;
+
+    }
+
+    &__title {
+        color: #39bfed;
+    }
+
+    &__subtitle {
+        margin-bottom: 50px;
+        span {color: #39bfed;}
+    }
+
+    &__tabs-containers {
+        margin: 0;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        margin-left: 300px;
+        padding-left: 0;
+
+        max-width: calc(100% - 340px);
+    }
+
+    &__tabs-container.active {
+        display: block;
+    }
+
+    &__tabs-container {
+        display: none;
+        width: 100%;
+    }
+
+    &__tabs-triggers{
+        padding-left: 0;
+        list-style: none;
+        transform: rotate(-90deg);
+        position: absolute;
+        top: 44px;
+        left: -44px;
+        margin: 0;
+    }
+
+    &__tabs-trigger {
+        background-color: $blue;
+        padding: 20px 70px;
+        color :#fff;
+        width: 320px;
+        transition: .3s all;
+        cursor: pointer;
+        position: relative;
+
+        &:after {
+            content: '';
+            width: 26px;
+            height: 14px;
+            display: inline-block;
+            background-image: url('../images/wave-icon.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: absolute;
+            top: 50%;
+            left: -26px;
+            transform: translateY(-50%);
+            opacity: 0;
+            transition: .3s all;
+        }
+    }
+
+
+    &__tabs-trigger.active,
+    &__tabs-trigger:hover {
+        background-color: #fff;
+        color: $blue;
+
+        &:after {
+            opacity: 1;
+            left: 22px;
+        }
+    }
+}
+
+.dinamic-container {
+
+    &__title {
+        color: #37393a;
+        font-size: 24px;
+
+        span {
+            color: #2b2929;
+            font-size: 48px;
+        }
+    }
+
+    &__progress-block {
+        margin-top: 25px;
+        width: 25%;
+
+        &.active {
+            transition: 1s all ease-in-out;
+        }
+    }
+
+
+    &__row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__value,
+    &__time {
+        color: #37393a;
+    }
+
+    &__line {
+        width: 100%;
+        height: 3px;
+        background-color: #3dc7fa;
+        margin-top: 5px;
+    }
+
+}

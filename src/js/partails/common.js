@@ -132,10 +132,66 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
+    animationDinamic();
+
+    //Tabs
+    $('.js-tab-trigger').click(function () {
+        var id = $(this).attr('data-tab'),
+            content = $('.js-tab-content[data-tab="' + id + '"]');
+
+        $('.js-tab-trigger.active').removeClass('active');
+        $(this).addClass('active');
+
+        $('.js-tab-content.active').removeClass('active');
+        content.addClass('active');
+
+        animationDinamic();
+
+    });
 
 
 
-// AIzaSyBUoFK2LEyLKgRJAnQLAN5NrSs-oZob_BM
+    function animationDinamic() {
+        var options = {
+            useEasing: true,
+            useGrouping: true,
+            separator: ' ',
+            decimal: '.',
+            suffix: ' '
+        };
+
+        var incrementValue = document.querySelector('.js-tab-content.active .js-increment').getAttribute('data-number');
+
+        incrementValue = +incrementValue.replace(/\s/g, '');
+
+        var demo = new CountUp('.js-tab-content.active .js-increment', 0, +incrementValue, 0, 1, options);
+
+        if (!demo.error) demo.start();
+        else console.error(demo.error);
+
+        var progressBars = $('.js-tab-content.active .js-dinamic-animation'),
+            progressValues = $('.js-tab-content.active .js-dinamic-value'),
+            values = [];
+
+        // Заменяем пробелы в показателях для получения типа: число
+        values[0] = $(progressValues[0]).text().replace(/\s/g, '');
+        values[1] = $(progressValues[1]).text().replace(/\s/g, '');
+
+        // Деление второго показателя на первый для получения процентов
+        var percent = values[1] / values[0] * 100;
+
+        // Может получиться 150% и линия вылезет за границу блока, этим мы ограничиваем возможное значение
+        if (percent > 100) percent = 100;
+
+        // Удаляем активный класс для сброса значений, если не удалить класс долгая анимация не даст сбросить значение
+        // 25% потому что текста налезают друг на друга
+        $(progressBars[0]).removeClass('active').css('width', '25%');
+        $(progressBars[1]).removeClass('active').css('width', '25%');
+
+        // Первое значение всегда 100% так как максимальное, второе по проценту от первого значения
+        $(progressBars[0]).addClass('active').css('width', '100%');
+        $(progressBars[1]).addClass('active').css('width', percent + '%');
+    }
 
 
 }); // end DOM Content Loaded
