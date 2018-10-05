@@ -8,21 +8,32 @@ html(lang="ru")
 		.page
 			.page__content
 
+				//START GREETING
+				.greeting(style="background-image: url('images/portfolio-bg.jpg')")
+					h1.greeting__title.greeting__title--dark #[span Работы,] которыми мы гордимся
+				//END GREETING
+
+
 				//START DETAIL CONTENT
 				.detail
-					.detail__content
+					.detail__content.container
 						.detail__sliders
-							.detail-slider-main.js-detail-main-slider
-								each i in [1,2,3,4]
+							.detail__nav-slider.detail-nav-slider.js-detail-nav-slider
+								each i in [2,3,4,2,3,4]
+									.detail-nav-slider__item
+										img.detail-nav-slider__img(src="images/detail-img-"+i+".jpg" alt="")
+							.detail__main-slider.detail-main-slider.js-detail-main-slider
+								each i in [1,2,3,4,5,6]
 									.detail-slider-main__item
-										img.detail-slider-main__img(src="images/detail-main-img-1.jpg")
-							.detail-slider-nav.js-detail-nav-slider
-								each i in [2,3,4]
-									.detail-slider-nav__item
-										img.detail-slider-nav__img(src="images/detail-img-"+i+".jpg")
+										img.detail-slider-main__img(src="images/detail-main-img-1.jpg" alt="")
 						.detail__info.detail-info
-							h1.detail-info__title
-							p.detail-info__descr
+							h1.detail-info__title Бассейн Villagio
+							p.detail-info__descr.
+								Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты.
+								Вдали от всех живут они в буквенных домах на
+								берегу Семантика большого языкового океана. Маленький ручеек Даль журчит по всей стране
+								и обеспечивает ее всеминеобходимыми правилами.
+
 
 							ul.detail-info__params.detail-params
 								each item in detailParams
@@ -33,20 +44,23 @@ html(lang="ru")
 												span.detail-params__subtitle=item.subtitle
 										p.detail-params__value=item.value
 
-							a.detail__btn.btn.btn--lightblue(href="#") Заказать
+							a.detail-info__btn.btn.btn--lightblue(href="#") Заказать
 				//END DETAIL CONTENT
 
 				//START REVIEWS
-				.reviews
-					.headline.headline--sm Отзывы
-					.headline Наши клиенты говорят о нас
-					.reviews__list.reviews-slider
-						each review in reviews
-							.review
-								p.review__text Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat a aliquam expedita ducimus odit, alias iusto optio libero delectus reprehenderit?
-								span.review__sign=review.name
-								.review__img-wrapp
-									img.reviews__img(src=review.src alt="Фото клиента: " + review.name)
+				.detail__reviews.reviews
+					.reviews__content.container
+						.reviews__title.headline.headline--sm Отзывы
+						.reviews__subtitle.headline Наши клиенты говорят о нас
+						.reviews__list.js-reviews-slider
+							each review in reviews
+								.review.reviews__item
+									p.review__text Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех живут они в буквенных домах на
+
+									span.review__name=review.name
+									.review__img-wrapp
+										// Если фото нет, не выводите <img>, в этом блоке стоит background-image заменитель, просто оставьте пустой блок
+										img.review__img(src=review.src alt="Фото клиента: " + review.name)
 				//END REVIEWS
 
 

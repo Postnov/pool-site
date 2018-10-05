@@ -84,11 +84,13 @@
         border-radius: 40px;
         transition: .3s all;
         text-decoration: none;
+        cursor: pointer;
 
         &:hover {
-            color: $blue;
+            background-color: $blue;
             border-color: $blue;
-            cursor: pointer;
+            color: #fff;
+
         }
     }
 }

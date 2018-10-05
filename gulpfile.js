@@ -174,7 +174,7 @@ gulp.task('fonts:build', function() {
 
 
 gulp.task('build', gulpSequence(
-    ['pug:build', 'css:build', 'js:build', 'images:optimize', 'fonts:build'],
+    ['pug:build', 'css:build', 'js:build', 'images:build', 'fonts:build'],
     ['pug:comb','css:polish', 'js:min']
 ));
 

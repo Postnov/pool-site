@@ -152,46 +152,90 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
     function animationDinamic() {
-        var options = {
-            useEasing: true,
-            useGrouping: true,
-            separator: ' ',
-            decimal: '.',
-            suffix: ' '
-        };
+        if ($('.js-tab-content').length) {
 
-        var incrementValue = document.querySelector('.js-tab-content.active .js-increment').getAttribute('data-number');
+            var options = {
+                useEasing: true,
+                useGrouping: true,
+                separator: ' ',
+                decimal: '.',
+                suffix: ' '
+            };
 
-        incrementValue = +incrementValue.replace(/\s/g, '');
+            var incrementValue = document.querySelector('.js-tab-content.active .js-increment').getAttribute('data-number');
 
-        var demo = new CountUp('.js-tab-content.active .js-increment', 0, +incrementValue, 0, 1, options);
+            incrementValue = +incrementValue.replace(/\s/g, '');
 
-        if (!demo.error) demo.start();
-        else console.error(demo.error);
+            var demo = new CountUp('.js-tab-content.active .js-increment', 0, +incrementValue, 0, 1, options);
 
-        var progressBars = $('.js-tab-content.active .js-dinamic-animation'),
-            progressValues = $('.js-tab-content.active .js-dinamic-value'),
-            values = [];
+            if (!demo.error) demo.start();
+            else console.error(demo.error);
 
-        // Заменяем пробелы в показателях для получения типа: число
-        values[0] = $(progressValues[0]).text().replace(/\s/g, '');
-        values[1] = $(progressValues[1]).text().replace(/\s/g, '');
+            var progressBars = $('.js-tab-content.active .js-dinamic-animation'),
+                progressValues = $('.js-tab-content.active .js-dinamic-value'),
+                values = [];
 
-        // Деление второго показателя на первый для получения процентов
-        var percent = values[1] / values[0] * 100;
+            // Заменяем пробелы в показателях для получения типа: число
+            values[0] = $(progressValues[0]).text().replace(/\s/g, '');
+            values[1] = $(progressValues[1]).text().replace(/\s/g, '');
 
-        // Может получиться 150% и линия вылезет за границу блока, этим мы ограничиваем возможное значение
-        if (percent > 100) percent = 100;
+            // Деление второго показателя на первый для получения процентов
+            var percent = values[1] / values[0] * 100;
 
-        // Удаляем активный класс для сброса значений, если не удалить класс долгая анимация не даст сбросить значение
-        // 25% потому что текста налезают друг на друга
-        $(progressBars[0]).removeClass('active').css('width', '25%');
-        $(progressBars[1]).removeClass('active').css('width', '25%');
+            // Может получиться 150% и линия вылезет за границу блока, этим мы ограничиваем возможное значение
+            if (percent > 100) percent = 100;
 
-        // Первое значение всегда 100% так как максимальное, второе по проценту от первого значения
-        $(progressBars[0]).addClass('active').css('width', '100%');
-        $(progressBars[1]).addClass('active').css('width', percent + '%');
+            // Удаляем активный класс для сброса значений, если не удалить класс долгая анимация не даст сбросить значение
+            // 25% потому что текста налезают друг на друга
+            $(progressBars[0]).removeClass('active').css('width', '25%');
+            $(progressBars[1]).removeClass('active').css('width', '25%');
+
+            // Первое значение всегда 100% так как максимальное, второе по проценту от первого значения
+            $(progressBars[0]).addClass('active').css('width', '100%');
+            $(progressBars[1]).addClass('active').css('width', percent + '%');
+
+        }
     }
+
+
+
+
+
+
+
+
+    //Detail sliders
+
+    $('.js-detail-nav-slider').slick({
+        vertical: true,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        arrows: true,
+        infinite: false,
+        asNavFor: '.js-detail-main-slider'
+    })
+
+    $('.js-detail-main-slider').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        fade: true,
+        arrows: false,
+        infinite: false,
+        asNavFor: '.js-detail-nav-slider'
+    });
+
+
+    $('.js-reviews-slider').slick({
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        dots: true,
+        infinite: false,
+        variableWidth: true,
+        arrows: false
+    });
+
+
+
 
 
 }); // end DOM Content Loaded

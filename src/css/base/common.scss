@@ -28,13 +28,6 @@
 }
 
 
-.water-gray-bg {
-    background-image: url('../images/service-footer-bg.jpg');
-    background-repeat: no-repeat;
-    background-position: center -160%;
-    background-size: 110% auto;
-}
-
 .line-top {
     border-top: 1px solid #ccc;
 }
@@ -137,6 +130,7 @@
         width: calc(100% - 30px);
         margin: 0;
         user-select: none;
+        line-height: 1.4;
     }
 }
 
@@ -160,5 +154,26 @@
     &:hover {
         background-color: #00f;
         color: #fff;
+    }
+
+    &--lightblue {
+        margin-top: 20px;
+        border-radius: 21px;
+        border: 2px solid #46bcec;
+        padding: 10px 60px;
+        font-size: 14px;
+        color: #3dc7fa;
+        letter-spacing: -0.43px;
+
+        &:hover {
+            background-color: #46bcec;
+        }
+    }
+
+    &--white {
+        &:hover {
+            background-color: #fff;
+            color: #46bcec;
+        }
     }
 }

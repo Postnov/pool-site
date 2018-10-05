@@ -9,6 +9,7 @@
 //import ('../../bower_components/slick-carousel/slick/slick.min.js');
 //import ('partails/inputmask.js');
 //import ('partails/wow.min.js');
+//import ('partails/sweetAlert.min.js');
 new WOW().init();
 //import ('partails/countUp.js');
 //import ('partails/common.js');

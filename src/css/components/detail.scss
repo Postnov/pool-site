@@ -1,2 +1,150 @@
 /* DETAIL STYLES */
+
+.detail {
+    margin-top: 90px;
+
+
+    &__content {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    &__sliders {
+        width: 60%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
+
+    &__nav-slider{
+        width: 17%;
+        padding: 25px 0;
+    }
+    &__main-slider{
+        width: 83%;
+        text-align: center;
+    }
+
+    &__info {
+        width: 37%;
+    }
+
+    &__reviews {
+        margin-top: 40px;
+    }
+}
+
+
+.detail-nav-slider {
+    &__item {
+        margin: 10px 0;
+        outline: none;
+    }
+
+    .slick-prev,
+    .slick-next {
+        width: 23px;
+        height: 13px;
+        background-color: transparent;
+        font-size: 0;
+        border: none;
+        background-repeat: no-repeat;
+        background-size: cover;
+        outline: none;
+        cursor: pointer;
+        position: absolute;
+        z-index: 5;
+        left: 50%;
+        transform: translateX(-50%);
+
+        &.slick-disabled {
+            filter: grayscale(1);
+        }
+    }
+
+    .slick-next {
+        bottom: 0;
+        background-image: url('../images/down-arrow-slider.png');
+    }
+
+    .slick-prev {
+        top: 0;
+        background-image: url('../images/up-arrow-slider.png');
+
+    }
+}
+
+.detail-slider-main {
+    &__item {
+        outline: none;
+    }
+    &__img {
+        margin: 0 auto;
+    }
+}
+
+.detail-info {
+    &__title{
+        font-size: 34px;
+        color: #044483;
+        margin: 0 0 20px;
+        font-weight: 500;
+    }
+    &__descr{
+        margin: 0;
+        color: #5e5c62;
+        line-height: 1.4;
+    }
+
+    &__btn {
+        margin-top: 35px;
+    }
+}
+
+.detail-params {
+    margin-top: 70px;
+    padding-left: 0;
+    list-style: none;
+
+    &__text {
+        margin: 0;
+    }
+
+    &__title {
+        font-family: $opensans;
+        font-size: 16px;
+        font-weight: 600;
+        display: block;
+        line-height: 1;
+        color: #3170af;
+    }
+
+    &__subtitle {
+        display: block;
+        color: #5e5c62;
+        font-size: 12px;
+    }
+
+    &__value {
+        color: #5e5c62;
+        font-size: 16px;
+        line-height: 1.4;
+    }
+
+    &__item {
+        border-top: 1px solid #d7d7d7;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &:last-child{
+            border-bottom: 1px solid #d7d7d7;
+        }
+    }
+
+
+}
 /* END DETAIL STYLES */
