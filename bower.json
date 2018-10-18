@@ -17,5 +17,8 @@
     "animate.css": "^3.7.0",
     "slick-carousel": "^1.8.1",
     "fancybox": "^3.4.2"
+  },
+  "devDependencies": {
+    "jquery": "^3.3.1"
   }
 }

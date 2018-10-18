@@ -20,15 +20,14 @@
   "dependencies": {
     "jquery": ">=1.9.0"
   },
-  "version": "3.4.2",
-  "_release": "3.4.2",
+  "version": "3.5.2",
+  "_release": "3.5.2",
   "_resolution": {
     "type": "version",
-    "tag": "v3.4.2",
-    "commit": "48c7be612e29083d9face31fa2c16a976eef4ab6"
+    "tag": "v3.5.2",
+    "commit": "920b3e4dd54468ff9a0e4e40f35c533f21b3e1d1"
   },
   "_source": "https://github.com/fancyapps/fancyBox.git",
   "_target": "^3.4.2",
-  "_originalSource": "fancybox",
-  "_direct": true
+  "_originalSource": "fancybox"
 }

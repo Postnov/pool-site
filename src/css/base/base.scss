@@ -3,6 +3,10 @@ body {
     box-sizing: border-box;
     font-family: $opensans;
     font-weight: 400;
+
+    &.no-scroll {
+        overflow: hidden;
+    }
 }
 
 *, *:after, *:before {
@@ -11,6 +15,18 @@ body {
 
 p {
     line-height: 1.5;
+}
+
+.page a,
+.page__content a {
+    color: $blue;
+    text-decoration: none;
+    border-bottom: 1px solid;
+    transition: .3s all;
+
+    &:hover {
+        border-bottom: 1px solid transparent;
+    }
 }
 
 img {

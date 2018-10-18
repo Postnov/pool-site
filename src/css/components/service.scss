@@ -1,6 +1,14 @@
 .service-about {
     padding-bottom: 100px;
 
+    background-image: url('../images/water-partails-bg.png'),
+                      url('../images/water-partails-bg-2.png');
+
+    background-position: 0 100%, 100% 100%;
+    background-repeat: no-repeat;
+    // background-size: 130px, 350px;
+    background-size: 11%, 26%;
+
     &__title {
         margin-top: 93px;
         margin-bottom: 55px;
@@ -39,6 +47,11 @@
             top: 0;
             left: 0;
         }
+
+
+        @include _600 {
+            width: 100%;
+        }
     }
 }
 
@@ -48,6 +61,12 @@
     background-size: cover;
     background-repeat: no-repeat;
     padding: 70px 0 80px 0;
+
+    @include _768 {
+        background-image: none;
+        // background-color: #329bc1;
+        background-color: $blue;
+    }
 
     &__title {
         color: #25d4d4;
@@ -65,11 +84,19 @@
     .icon-grid__item {
         width: 33%;
         margin: 0 0 60px;
+
+        @include _768 {
+            width: 50%;
+        }
+
+        @include _480 {
+            width: 100%;
+        }
     }
 
     .icon-grid__text {
         max-width: 200px;
-        text-align: left;
+        text-align: center;
     }
 }
 
@@ -84,11 +111,20 @@
     background-color: #fff;
     padding-bottom: 150px;
 
+    @include _768 {
+        background-position: 0 100%;
+    }
+
     &__content {
         border: 1px solid #ebebeb;
         height: 322px;
         position: relative;
         background-color: #fff;
+
+        @include _979 {
+            height: auto;
+            padding: 20px;
+        }
 
     }
 
@@ -110,6 +146,11 @@
         padding-left: 0;
 
         max-width: calc(100% - 340px);
+        @include _979 {
+            width: 100%;
+            max-width: 100%;
+            margin: 30px 0;
+        }
     }
 
     &__tabs-container.active {
@@ -129,6 +170,13 @@
         top: 44px;
         left: -44px;
         margin: 0;
+
+        @include _979 {
+            transform: rotate(0);
+            position: relative;
+            left: auto;
+            top: auto;
+        }
     }
 
     &__tabs-trigger {
@@ -155,6 +203,12 @@
             opacity: 0;
             transition: .3s all;
         }
+
+        @include _979 {
+            width: 100%;
+            margin: 0;
+            border-bottom: 1px solid lighten($blue, 10%);
+        }
     }
 
 
@@ -180,6 +234,11 @@
             color: #2b2929;
             font-size: 48px;
         }
+
+        @include _600 {
+            font-size: 18px;
+            span { font-size: 30px; }
+        }
     }
 
     &__progress-block {
@@ -188,6 +247,10 @@
 
         &.active {
             transition: 1s all ease-in-out;
+        }
+
+        @include _600 {
+            width: 50%;
         }
     }
 
@@ -201,6 +264,10 @@
     &__value,
     &__time {
         color: #37393a;
+
+        @include _600 {
+            font-size: 14px;
+        }
     }
 
     &__line {

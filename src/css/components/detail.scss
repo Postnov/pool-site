@@ -15,21 +15,47 @@
         width: 60%;
         display: flex;
         align-items: flex-start;
-        justify-content: flex-start;
+        justify-content: space-between;
         flex-wrap: wrap;
+
+        @include _979 {
+            width: 100%;
+            margin-bottom: 50px;
+        }
     }
 
     &__nav-slider{
         width: 17%;
         padding: 25px 0;
+
+
+        @include _768 {
+            width: 100%;
+            order: 2;
+        }
     }
     &__main-slider{
         width: 83%;
         text-align: center;
+
+
+        @include _979 {
+            width: 80%;
+            order: 1;
+        }
+
+        @include _768 {
+            width: 100%;
+        }
     }
 
     &__info {
         width: 37%;
+
+        @include _979 {
+            width: 80%;
+            margin: 0 auto;
+        }
     }
 
     &__reviews {
@@ -42,6 +68,15 @@
     &__item {
         margin: 10px 0;
         outline: none;
+    }
+
+    &__img {
+        margin: 0 auto;
+    }
+
+    .slick-list {
+        @include _480 {
+        }
     }
 
     .slick-prev,
@@ -60,20 +95,42 @@
         left: 50%;
         transform: translateX(-50%);
 
+
         &.slick-disabled {
             filter: grayscale(1);
+        }
+
+        @include _768 {
+            width: 15px;
+            height: 25px;
+            transform: translate(0, -50%);
+            top: auto;
+            right: auto;
+            bottom: auto;
+            left: auto;
         }
     }
 
     .slick-next {
         bottom: 0;
         background-image: url('../images/down-arrow-slider.png');
+
+        @include _768 {
+            top: 50%;
+            right: 0;
+            background-image: url('../images/arrow-right.png');
+        }
     }
 
     .slick-prev {
         top: 0;
         background-image: url('../images/up-arrow-slider.png');
 
+        @include _768 {
+            top: 50%;
+            left: 0;
+            background-image: url('../images/arrow-left.png');
+        }
     }
 }
 
@@ -101,6 +158,10 @@
 
     &__btn {
         margin-top: 35px;
+
+        @include _480 {
+            width: 100%;
+        }
     }
 }
 

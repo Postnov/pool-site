@@ -4,11 +4,23 @@
     max-width: 600px;
     font-weight: 400;
 
+    @include _768 {
+        font-size: 28px;
+    }
+
+    @include _480 {
+        font-size: 24px;
+    }
+
     &--sm {
         font-size: 20px;
         color: $dark-blue;
         margin-bottom: 11px;
         letter-spacing: -0.47px;
+
+        @include _600 {
+            font-size: 16px;
+        }
     }
 }
 
@@ -18,6 +30,10 @@
     }
 }
 
+.blue-color {
+    color: $blue;
+}
+
 .container {
     width: 100%;
     max-width: 1000px;
@@ -25,6 +41,16 @@
     margin-right: auto;
     padding-left: 15px;
     padding-right: 15px;
+}
+
+.section {
+    padding: 20px 0;
+}
+
+.page {
+    &__content {
+        overflow-x: hidden;
+    }
 }
 
 

@@ -159,10 +159,10 @@ gulp.task('images:optimize', function (cb) {
 gulp.task('images:build', function () {
     gulp.src(path.src.img)
         .pipe(gulp.dest(path.dist.img))
-        .on('error', function (err) {
-            console.log(err.toString());
-            this.emit('end');
-        })
+        // .on('error', function (err) {
+        //     console.log(err.toString());
+        //     this.emit('end');
+        // })
         .pipe(plumber())
 });
 

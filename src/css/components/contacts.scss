@@ -22,6 +22,14 @@
 
 .contact-form {
 
+
+    &__submit {
+        @include _850 {
+            margin-bottom: 30px;
+        }
+    }
+
+
     &__grid {
         display: flex;
         justify-content: space-between;
@@ -41,6 +49,10 @@
             margin-top: 80px;
             margin: 0;
         }
+
+        @include _600 {
+            width: 100%;
+        }
     }
 
     &__row {
@@ -49,6 +61,7 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        flex-wrap: wrap;
     }
 
     &__personal-check {
@@ -81,7 +94,8 @@
     }
 
     &__info {
-        width: 365px;
+        width: 90%;
+        max-width: 365px;
         position: absolute;
         top: 50%;
         left: 50%;
@@ -89,11 +103,28 @@
         background-color: #fff;
         padding: 50px 20px 80px 60px;
         box-shadow: 0 5px 10px -1px rgba(0, 0, 0, 0.5);
+
+        @include _1170 {
+            transform: translate(0, -50%);
+            left: 20px;
+        }
+
+        @include _480 {
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding-left: 30px;
+        }
     }
 }
 
 .map-info {
     text-decoration: none;
+    background-image: url('../images/map-info-bg.png');
+    background-repeat: no-repeat;
+    background-position: 0 100%;
+    background-size: 100% auto;
+
+
     &__title {
         color: #044483;
         margin: 0;

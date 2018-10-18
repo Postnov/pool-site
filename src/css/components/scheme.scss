@@ -1,6 +1,6 @@
 /* SCHEME STYLES */
 .scheme {
-    padding: 70px 100px;
+    padding: 70px 0;
 
     &__subtitle {
         margin-bottom: 50px;
@@ -15,10 +15,27 @@
         flex-wrap: wrap;
         align-items: stretch;
         text-align: center;
+
+        @include _768 {
+            margin-top: 100px;
+        }
     }
 
     &__item {
         width: 27%;
+
+        @include _850 {
+            width: 43%;
+        }
+
+        @include _690 {
+            width: 70%;
+            margin: 0 auto;
+        }
+
+        @include _480 {
+            width: 90%;
+        }
     }
 }
 
@@ -26,22 +43,41 @@
     margin-bottom: 75px;
     position: relative;
 
-    &:nth-child(3n + 2),
-    &:nth-child(3n + 1) {
+    &:after {
+        content: '';
+        position: absolute;
+        top: 13px;
+        right: -46px;
+        display: inline-block;
+        width: 17px;
+        height: 28px;
+        background-image: url('../images/arrow-right.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
 
+    &:nth-child(3n + 3) {
         &:after {
-            content: '';
-            position: absolute;
-            top: 13px;
-            right: -46px;
-            display: inline-block;
-            width: 17px;
-            height: 28px;
-            background-image: url('../images/arrow-right.png');
-            background-size: cover;
-            background-repeat: no-repeat;
+            display: none;
         }
     }
+
+    @include _850 {
+        &:nth-child(3n + 3) {
+            &:after { display: inline-block;}
+        }
+
+        &:nth-child(2n + 2) {
+            &:after { display: none;}
+        }
+    }
+
+    @include _690 {
+        &:after {
+            display: none !important;
+        }
+    }
+
 
     &__icon {
         height: 75px;

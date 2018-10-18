@@ -39,13 +39,19 @@
 }
 
 @mixin _850{
-    @media (max-width: 979px) {
+    @media (max-width: 850px) {
         @content;
     }
 }
 
 @mixin _768{
     @media (max-width: 768px) {
+        @content;
+    }
+}
+
+@mixin _690{
+    @media (max-width: 690px) {
         @content;
     }
 }

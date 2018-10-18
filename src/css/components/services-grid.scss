@@ -16,8 +16,15 @@
         position: relative;
         overflow: hidden;
         border: 1px solid #d7d7d7;
+        transition: .4s all;
+
+        @include _600 {
+            width: 100%;
+        }
 
         &:hover {
+            transform: scale(1.02);
+
             #{$services-grid}__content {
                 opacity: 0;
             }

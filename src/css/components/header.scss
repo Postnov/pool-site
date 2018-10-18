@@ -1,6 +1,37 @@
 /* HEADER STYLES */
 
 .header {
+    background-color: #fff;
+    z-index: 30;
+    position: relative;
+
+    &--fixed {
+        opacity: 0;
+        visibility: hidden;
+
+        transform: translateY(-100px);
+
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        box-shadow: 0 0 10px 0 rgba(146, 146, 146, .7);
+        z-index: 20;
+
+        transition: all .3s, transform .5s;
+
+        &.active {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+    }
+
+    @include _768 {
+        padding: 10px 0;
+    }
+
     &__container {
         display: flex;
         align-items: center;
@@ -9,6 +40,19 @@
 
     &__nav{
         flex-grow: 1;
+    }
+
+    &__nav-trigger {
+        width: 30px;
+        height: 30px;
+        fill: $blue;
+        cursor: pointer;
+
+        display: none;
+
+        @include _768 {
+            display: block;
+        }
     }
 
 
@@ -38,7 +82,70 @@
 }
 
 .nav {
+    $nav: &;
     padding: 0 10px;
+
+    &.active {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+        background-position: -20% center, 120% center;
+
+        #{$nav}__cross {
+            transform: translateX(0);
+
+            &:hover {
+                top: 25px;
+            }
+        }
+
+    }
+
+    @include _768 {
+        opacity: 0;
+        visibility: hidden;
+        transition: all .5s ease-in-out,
+                    background-position 1s ease-in-out .2s;
+
+
+        transform: translateY(20px);
+
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #fff;
+        z-index: 10;
+        text-align: center;
+
+        display: flex;
+        align-items: center;
+        padding: 0;
+
+        background-image: url('../images/wave.svg'), url('../images/wave.svg');
+        background-repeat: no-repeat;
+        background-position: -80% center, 180% center;
+        background-size: 30%;
+    }
+
+    &__cross {
+        width: 35px;
+        height: 35px;
+        position: fixed;
+        top: 30px;
+        right: 30px;
+        transition: transform .5s ease-in-out 2s, top .3s ease-in-out;
+        transform: translateX(100px);
+        cursor: pointer;
+
+        @include _350 {
+            width: 30px;
+            height: 30px;
+        }
+
+
+    }
 
     &__list {
         padding-left: 0;
@@ -48,10 +155,20 @@
         justify-content: center;
         flex-wrap: wrap;
         margin: 0;
+
+        @include _768 {
+            max-height: 100%;
+            overflow-y: auto;
+            padding: 50px;
+        }
     }
 
     &__item {
         overflow: hidden;
+
+        @include _768 {
+            width: 100%;
+        }
     }
 
     &__link {
@@ -77,14 +194,79 @@
             transition: .3s all;
         }
 
-        &:hover {
+        &.active{
+            color: $blue;
+            pointer-events: none;
+            user-select: none;
+
+            @include _768 {
+
+                &:after,&:before {
+                    content: '';
+                    display: inline-block;
+                    position: absolute;
+                    width: 60%;
+                    height: 1px;
+                    transform: translate(-50%, 0);
+                    left: 50%;
+                    background-color: $blue;
+                }
+
+                &:before {
+                    top: 0;
+                }
+
+            }
+        }
+
+
+
+        &:hover,
+        &.active {
             color: $blue;
 
             &:after {
                 background-color: $blue;
                 transform: translateX(0);
+
+                @include _768 {
+                    transform: translate(-50%, 0);
+                }
             }
         }
+
+
+
+        @include _768 {
+            font-size: 23px;
+            padding: 20px;
+            line-height: 1.2;
+
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(5px);
+            transition: all .3s;
+
+            &.is-active {
+                visibility: visible;
+                opacity: 1;
+                transform: translateX(0);
+                transition-duration: .3s;
+            }
+
+            &:after {
+                height: 1px;
+            }
+        }
+
+        @include _350 {
+            font-size: 20px;
+            padding: 15px;
+        }
+
+
+
+
     }
 }
 
@@ -96,8 +278,25 @@
     &__text{
         margin-left: 5px;
         display: inline-block;
+
+        @include _979 {
+            display: none;
+        }
+
+        @include _768 {
+            display: block;
+            width: 100px;
+        }
+
+        @include _480 {
+            display: none;
+        }
     }
-    &__sign{}
+    &__sign{
+        @include _768 {
+            width: 50px;
+        }
+    }
 }
 
 

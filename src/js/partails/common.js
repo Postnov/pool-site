@@ -212,7 +212,46 @@ document.addEventListener('DOMContentLoaded', function () {
         slidesToScroll: 1,
         arrows: true,
         infinite: false,
-        asNavFor: '.js-detail-main-slider'
+        asNavFor: '.js-detail-main-slider',
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 4,
+                    slidesToScroll: 1,
+                    arrows: true,
+                    vertical: false
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    arrows: true,
+                    vertical: false
+                }
+            },
+            {
+                breakpoint: 400,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                    arrows: true,
+                    vertical: false
+                }
+            },
+            {
+                breakpoint: 350,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    arrows: true,
+                    vertical: false
+                }
+            },
+          ]
+
     })
 
     $('.js-detail-main-slider').slick({
@@ -227,15 +266,73 @@ document.addEventListener('DOMContentLoaded', function () {
 
     $('.js-reviews-slider').slick({
         slidesToShow: 3,
-        slidesToScroll: 3,
+        slidesToScroll: 1,
         dots: true,
         infinite: false,
-        variableWidth: true,
-        arrows: false
+        // variableWidth: true,
+        arrows: false,
+        responsive: [
+            {
+              breakpoint: 1050,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1,
+              }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                  slidesToShow: 1,
+                  slidesToScroll: 1,
+                }
+              }
+          ]
     });
 
 
+    //navigation
 
+    $(document).on('click', '.js-nav-toggle', function(e) {
+        e.preventDefault();
+
+        $('.nav').toggleClass('active');
+        $('body').toggleClass('no-scroll')
+
+        console.log($('.nav').hasClass('active'));
+
+
+        if ($('.nav').hasClass('active')) {
+            $('.nav__link').each(function(i, item) {
+                (function(i) {
+                    setTimeout(function() {
+                        $(item).addClass('is-active');
+                    },i * 200)
+                })(i)
+
+            });
+        }else {
+            $('.nav__link').removeClass('is-active');
+        }
+    });
+
+    //fixed panel for scrolling
+
+    var fixedTop = $('.header').clone();
+    fixedTop.addClass('header--fixed');
+
+    if($(window).width() <= 768) {
+        fixedTop.find('.nav').remove();
+    }
+
+    $('.header').before(fixedTop);
+
+    $(window).scroll(function() {
+        if ( $(window).scrollTop() > 150) {
+            fixedTop.addClass('active');
+        } else {
+            fixedTop.removeClass('active');
+        }
+    });
 
 
 }); // end DOM Content Loaded

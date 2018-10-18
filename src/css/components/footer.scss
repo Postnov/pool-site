@@ -14,15 +14,38 @@
         display: flex;
         align-items: flex-start;
         justify-content: space-between;
+        flex-wrap: wrap;
+
+        @include _850 {
+            justify-content: flex-start;
+        }
     }
 
     &__menu {
 
     }
 
-    &__contacts {}
+    &__contacts {
+        @include _850 {
+            width: 30%;
+        }
+
+        @include _600 {
+            width: 100%;
+        }
+
+    }
+
     &__address {
         max-width: 160px;
+
+        @include _850 {
+            width: 30%;
+        }
+
+        @include _600 {
+            width: 100%;
+        }
     }
 }
 
@@ -30,9 +53,20 @@
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    flex-wrap: wrap;
+
+    @include _850 {
+        width: 100%;
+        justify-content: space-between;
+    }
 
     &__item {
         margin-right: 40px;
+
+        @include _600 {
+            width: 100%;
+            margin-bottom: 10px;
+        }
 
         &:last-child {
             margin-right: 0;

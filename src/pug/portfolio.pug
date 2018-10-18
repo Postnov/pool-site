@@ -17,8 +17,8 @@ html(lang="ru")
 					.portfolio__container.container
 						ul.portfolio__list
 							each item in portfolioList
-								li.portfolio__item.portfolio-item.fadeInUp.wow
-									img.portfolio-item__img(src=item.srcPath, alt="")
+								li.portfolio__item.portfolio-item.fadeInUp.wow(style="background-image: url("+item.srcPath+");")
+									//- img.portfolio-item__img(src=item.srcPath, alt="")
 									.portfolio-item__info
 										.portfolio-item__text
 											p.portfolio-item__title #{item.text}
