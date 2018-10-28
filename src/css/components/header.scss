@@ -93,6 +93,7 @@
 
         #{$nav}__cross {
             transform: translateX(0);
+            opacity: 1;
 
             &:hover {
                 top: 25px;
@@ -130,6 +131,7 @@
     }
 
     &__cross {
+        opacity: 0;
         width: 35px;
         height: 35px;
         position: fixed;

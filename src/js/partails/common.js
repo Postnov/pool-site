@@ -76,6 +76,10 @@ if (mapContainer) {
 
 document.addEventListener('DOMContentLoaded', function () {
 
+    var video = document.querySelector('#greeting-video');
+
+    video.play();
+
     // Первый параметр - массив классов, высоту которых надо вычитать. Второй - селектор элемента, которому нужно устанавливать минимальную высоту
 
     pageSetMinHieght(['.header', '.footer'], '.page__content');

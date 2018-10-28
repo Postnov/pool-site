@@ -63,6 +63,8 @@
     }
 
     @include _850 {
+        margin-bottom: 20px;
+
         &:nth-child(3n + 3) {
             &:after { display: inline-block;}
         }
